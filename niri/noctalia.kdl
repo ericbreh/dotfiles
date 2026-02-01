@@ -1,30 +1,35 @@
-debug {
-  honor-xdg-activation-with-invalid-serial
+layout {
+
+    focus-ring {
+        active-color   "#adc6ff"
+        inactive-color "#121316"
+        urgent-color   "#ffb4ab"
+    }
+
+    border {
+        active-color   "#adc6ff"
+        inactive-color "#121316"
+        urgent-color   "#ffb4ab"
+    }
+
+    shadow {
+        color "#00000070"
+    }
+
+    tab-indicator {
+        active-color   "#adc6ff"
+        inactive-color "#0f448e"
+        urgent-color   "#ffb4ab"
+    }
+
+    insert-hint {
+        color "#adc6ff80"
+    }
 }
 
-layer-rule {
-  match namespace="^noctalia-overview*"
-  place-within-backdrop true
-}
-
-binds {
-    // Core Noctalia binds
-    Mod+Space { spawn "noctalia-shell" "ipc" "call" "launcher" "toggle"; }
-    Mod+S { spawn "noctalia-shell" "ipc" "call" "controlCenter" "toggle"; }
-    Mod+Comma { spawn "noctalia-shell" "ipc" "call" "settings" "toggle"; }
-
-    // Audio controls
-    XF86AudioRaiseVolume allow-when-locked=true { spawn "noctalia-shell" "ipc" "call" "volume" "increase"; }
-    XF86AudioLowerVolume allow-when-locked=true { spawn "noctalia-shell" "ipc" "call" "volume" "decrease"; }
-    XF86AudioMute allow-when-locked=true { spawn "noctalia-shell" "ipc" "call" "volume" "muteOutput"; }
-    XF86AudioPlay allow-when-locked=true { spawn "noctalia-shell" "ipc" "call" "media" "playPause"; }
-
-
-    // Brightness controls
-    XF86MonBrightnessUp { spawn "noctalia-shell" "ipc" "call" "brightness" "increase"; }
-    XF86MonBrightnessDown { spawn "noctalia-shell" "ipc" "call" "brightness" "decrease"; }
-
-    // Utility shortcuts
-    Mod+V { spawn "noctalia-shell" "ipc" "call" "launcher" "clipboard"; }
-    Alt+L { spawn "noctalia-shell" "ipc" "call" "lockScreen" "lock"; }
+recent-windows {
+    highlight {
+        active-color "#adc6ff"
+        urgent-color "#ffb4ab"
+    }
 }
